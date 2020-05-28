@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>单行日历</title>
+<link href='css/dayCalendar.css' rel='stylesheet' />
+<script type="text/javascript" language="javascript" src='lib/jquery.min.js'></script>
+<script type="text/javascript" language="javascript" src='lib/moment.js'></script>
+<script type="text/javascript" language="javascript" src='lib/draggabilly.pkgd.min.js'></script>
+<script type="text/javascript" language="javascript" src='js/dayCalendar.js'></script>
+
+</head>
+<body>
+<div style="padding:10px;">
+	<div id="dayCalendar"></div>
+</div>
+
+<script>
+	var dayCalendar = $.fn.dayCalendar({
+		element : '#dayCalendar',
+		selectDate : moment().format("YYYY-MM-DD"),
+		dayClickCallback : function(date) {
+			alert('您选中的日期：'+date);
+		}
+	});
+</script>
+</body>
+</html>
